@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<body>
+    <form id="form">
+        <input type="email" id="logmail" placeholder="email">
+        <input type="number" id="logpass" placeholder="password">
+        <input type="submit">
+    </form>
+    
+</body>
+</html>
+<script>
+
+    var form=document.querySelector("#form")
+    var signdata=JSON.parse(localStorage.getItem("signup"))
+
+    form.addEventListener("submit",function(){
+        event.preventDefault()
+
+        var data={
+            email:form.logmail.value,
+            password:form.logpass.value
+        }
+
+        if(signdata==""){
+            alert("create an account")
+        }
+        else if(signdata.email==data.email && signdata.password==data.password){
+            alert("Sign IN in succesfull")
+            window.location.href="index.html"
+            alert("Welcome to E-Commerce")
+            localStorage.setItem("signin",JSON.stringify(signdata))
+        }else{
+            alert("Check your email or password")
+        }
+    })
+</script>

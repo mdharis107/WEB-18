@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+        <div id="nav">
+            <div id="logo">
+                <h2><a href="index.html">E-COMMERCE</a></h2>
+            </div>
+            <div id="product">
+                <h2><a href="mens.html">Mens</a></h2>
+                <h2><a href="womens.html">Womens</a></h2>
+                <h2><a href="cart.html">Add to Cart</a></h2>
+            </div>
+            <div id="sign">
+                <h2><a href="signup.html">Sign UP</a></h2>
+                <h2><a href="signin.html">LOGIN</a></h2>
+            </div>
+        </div>
+        <div id="demo">
+
+        </div>
+</body>
+</html>
+<script>
+var img1="https://images-static.nykaa.com/uploads/tr:w-190,e-sharpen,/bf8b0ef1-0520-41e1-9a0b-dee1017d37e9.jpg"
+var img2="https://images-static.nykaa.com/uploads/tr:w-190,e-sharpen,/ce5b4dff-6352-471f-adb4-981e7f6519cd.jpg"
+var img3="https://images-static.nykaa.com/uploads/tr:w-190,e-sharpen,/68872754-3a70-4afc-a6cf-09bf2749d3f5.jpg"
+var img4="https://images-static.nykaa.com/uploads/tr:w-190,e-sharpen,/870b9cd2-47e8-4797-a84a-57e38e42370f.jpg"
+    
+var user=document.querySelector("#sign")
+var sign=JSON.parse(localStorage.getItem("signup"))
+    
+    // if(sign==""){
+    //     alert("sign in")
+    // }
+    // else{
+    //     user.innerHTML=`<h2>User</h2>
+    //             <h2><a href="shipping.html">shipping</a></h2>`
+    // }
+    
+    var women=document.createElement("img")
+    women.setAttribute("src",img1)
+    women.style.cursor="pointer"
+    
+    var men=document.createElement("img")
+    men.setAttribute("src",img2)
+    
+    var kids=document.createElement("img")
+    kids.setAttribute("src",img3)
+   
+    var Tech=document.createElement("img")
+    Tech.setAttribute("src",img4)
+
+    document.querySelector("#demo").append(women,men,kids,Tech)
+
+
+
+</script>
